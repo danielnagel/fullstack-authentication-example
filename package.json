@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Nagel danielsenpai95@gmail.com",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/bcrypt-nodejs": "0.0.30"
-  }
+  "license": "ISC"
 }
