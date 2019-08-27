@@ -22,9 +22,9 @@ function tokenForUser(user: IUser) {
   }, secret);
 }
 
-export const signin = function (req: Request, res: Response): void {
+export const signin = function (req: any, res: Response): void {
   res.send({
-    token: tokenForUser(req.body.user)
+    token: tokenForUser(req.user)
   });
 };
 

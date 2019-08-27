@@ -25,10 +25,10 @@ export default (app: any) => {
         res.send('Express Server with JWT Authentication');
     });
 
-    app.get('/user', requireAuth, function (req: Request, res: Response) {
+    app.get('/user', requireAuth, function (req: any, res: Response) {
         try {
             res.send({
-                user: req.body.user.email.split('@')[0]
+                user: req.user.email.split('@')[0]
             });
         } catch (error) {
             res.status(402).send(`request does not contain user object: ${error}`);

@@ -1,7 +1,7 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample Authentication Application, written in TypeScript. Backend part.",
   "main": "src/server.js",
   "scripts": {
     "dev": "cd src && ts-node-dev --respawn --notify=false --transpileOnly server",
