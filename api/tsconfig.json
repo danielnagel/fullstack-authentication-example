@@ -1,11 +1,16 @@
 {
     "include": [
-        "src/server.ts"
+        "src/**/*",
+        "tests/**/*"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
     ],
     "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["*"],
+        },
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "module": "commonjs",
@@ -13,7 +18,7 @@
         "noImplicitAny": true,
         "target": "es5",
         "typeRoots": ["node_modules/@types"],
-        "types": ["node"],
+        "types": ["node", "jest"],
         "skipLibCheck": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
