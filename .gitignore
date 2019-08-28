@@ -3,3 +3,4 @@ config.ts
 coverage
 utputFormat
 .next
+build

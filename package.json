@@ -2,10 +2,29 @@
   "name": "typescript-express-next-jwt",
   "version": "1.0.0",
   "description": "Sample Authentication Application, written in TypeScript.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "run-p -lsn install:**",
+    "install:api": "cd api && npm i",
+    "install:www": "cd www && npm i",
+    "test": "run-p -lsn test:**",
+    "test:api": "cd api && npm test",
+    "start": "run-p -lsn start:**",
+    "start:api": "cd api && npm start",
+    "start:www": "cd www && npm start",
+    "dev": "run-p -lsn dev:**",
+    "dev:api": "cd api && npm run dev",
+    "dev:www": "cd www && npm run dev",
+    "build": "run-p -lsn build:**",
+    "build:api": "cd api && npm run build",
+    "build:www": "cd www && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danisenpai/fullstack-authentication-example.git"
   },
   "author": "Daniel Nagel danielsenpai95@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }
